@@ -1,9 +1,5 @@
-vim.api.nvim_set_keymap('n', '<leader>h', ':ToggleTerm<CR>', { noremap = true, silent = true })
-function _G.set_terminal_keymaps()
-  local opts = {buffer = 0}
-  vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
-end
-vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
+vim.api.nvim_set_keymap('n', '<leader>f', ':ToggleTerm direction=float<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader>b', ':ToggleTerm<CR>', { noremap = true, silent = true })
 return {
   'akinsho/toggleterm.nvim', version = "*", opts = {}
 }
